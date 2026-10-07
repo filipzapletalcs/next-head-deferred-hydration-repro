@@ -1,0 +1,20 @@
+{
+  "name": "next-head-deferred-hydration-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prebuild": "node scripts/generate-payload.mjs",
+    "build": "next build",
+    "start": "next start -p 3460",
+    "measure": "node scripts/measure.mjs",
+    "check-navigation": "node scripts/check-navigation.mjs"
+  },
+  "dependencies": {
+    "next": "16.5.0-canary.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
+}
